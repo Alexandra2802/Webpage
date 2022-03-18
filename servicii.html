@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.font1{
+font-family:Bahnschrift;
+font-size:20px;
+}
+body {
+  margin:0px;
+  background-color:#ceded8; 
+}
+.header {
+  background-image:url("bg-arh4.jpg");
+  padding: 0px;
+  text-align: center;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  font-family: Bernard MT Condensed;
+  
+}
+
+.navbar a {
+  float: left;
+  font-size: 27px;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 10px 1px;
+  text-decoration: none;
+}
+
+.effect{
+  transition: 0.3s ease;
+  background: transparent;
+  color: transparent;
+  font-size: 27px;
+  text-decoration: none;
+  border-top: 2px transparent;
+  border-bottom: 2px transparent;
+  padding: 1px 0;
+  margin: 0 20px;
+}
+.effect:hover {
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  padding: 6px 0; 
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+.tab {
+  float: left;
+  border: 1px solid #ccc;
+  background-color: #f1f1f1;
+  width: 20%;
+  height: 400px;
+}
+
+.tab button {
+  display: block;
+  background-color: inherit;
+  color: black;
+  padding: 22px 16px;
+  width: 100%;
+  height:25%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  font-size: 17px;
+}
+
+.tab button:hover {
+  background-color: #CCD8D6;
+}
+
+.tab button.active {
+  background-color: #95BDB6;
+}
+
+.tabcontent {
+  float: left;
+  padding: 0px 12px;
+  border: 1px solid #ccc;
+  width: 80%;
+  border-left: none;
+  height: 400px;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+<div class="navbar">
+<img src="logo.png" align="left">
+  <a class="effect" href="home.html">Acasa</a>
+  <a class="effect" href="servicii.html">Servicii</a>
+ <a class="effect" href="proiecte.html">Proiecte</a>
+  <a  class="effect" href="echipa.html">Echipa</a>
+</div>
+
+<font face="Engravers MT"><b>“Simplicity is the ultimate sophistication.”<br> Leonardo da Vinci</b></font>
+</div>
+
+
+
+<div class="content">
+
+<div class="tab">
+  <button class="tablinks" onclick="serviciu(event, 'Arhitectura')" id="defaultOpen">Arhitectura</button>
+  <button class="tablinks" onclick="serviciu(event, 'Urbanism')">Urbanism</button>
+  <button class="tablinks" onclick="serviciu(event, 'Design Interior')">Design Interior</button>
+  <button class="tablinks" onclick="serviciu(event, 'Modelare 3D')">Modelare 3D</button>
+</div>
+
+<div id="Arhitectura" class="tabcontent">
+  <h3>Arhitectură</h3>
+  <ul>
+  <li>Consultanță specializată arhitectură.
+<li>Consultanță  specializată pentru dezvoltarea proiectelor imobiliare.
+<li>Consultanță  accesare fonduri europene.
+</ul>
+<img src="arhitectura-casa.jpg">
+</div>
+
+<div id="Urbanism" class="tabcontent">
+  <h3>Urbanism</h3>
+  <ul>
+  <li>Consultanță parcelari.
+<li>Plan urbanistic de detaliu.
+<li>Plan urbanistic zonal. 
+</ul>
+<img src="urbanism.jpg">
+</div>
+
+<div id="Design Interior" class="tabcontent">
+  <h3>Design Interior</h3>
+  <ul>
+  <li>Amenajări interioare pentru locuințe.
+<li>Amenajări interioara spații comerciale, clădiri publice, showroom-uri, office planning.
+<li>Design de obiect și mobilier.
+</ul>
+
+<img src="design-int.jpg">
+</div>
+
+<div id="Modelare 3D" class="tabcontent">
+  <h3>Modelare 3D</h3>
+  <ul>
+ <li> Randări arhitecturale interioare și exterioare.
+<li>Planuri și elevații randate (colorate).
+<li>Vizualizări și filme de prezentare pentru dezvoltări imobiliare.
+<li>Modelare 3d.
+<li>Tururi virtuale.
+</ul>
+<img src="modelare3d.jpg">
+</div>
+
+</div>
+
+<script>
+function serviciu(evt, serv) {
+  var i, tabcontent, tablinks;
+  tabcontent = document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {
+    tabcontent[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablinks");
+  for (i = 0; i < tablinks.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+  document.getElementById(serv).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+document.getElementById("defaultOpen").click();
+
+</script>
+</body>
+</html>

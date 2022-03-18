@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+
+.font1{
+font-family:Bahnschrift;
+font-size:20px;
+padding:25px;
+}
+
+.img{
+padding:20px;
+}
+body {
+  margin:0px;
+  background-color:#ceded8; 
+}
+.header {
+  background-image:url("bg-arh4.jpg");
+  padding: 0px;
+  text-align: center;
+}
+.slideshow-container {
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: transparent;
+  font-family: Bernard MT Condensed;
+  
+}
+
+.navbar a {
+  float: left;
+  font-size: 27px;
+  color: #1a1a1a;
+  text-align: center;
+  padding: 10px 1px;
+  text-decoration: none;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: transparent;
+  color:black
+}
+
+.effect{
+  transition: 0.3s ease;
+  background: transparent;
+  color: transparent;
+  font-size: 27px;
+  text-decoration: none;
+  border-top: 2px transparent;
+  border-bottom: 2px transparent;
+  padding: 1px 0;
+  margin: 0 20px;
+}
+.effect:hover {
+  border-top: 4px solid black;
+  border-bottom: 4px solid black;
+  padding: 6px 0; 
+}
+.responsive {
+  width: 100%;
+  height: auto;
+}
+
+.image-container {
+  background-image: url("design.jpg");
+  background-size: cover;
+  position: relative;
+  height: 180px;
+  width:100%;
+}
+
+.text1 {
+  background-color: #0f1e3e;
+  color: white;
+  font-size: 6vw; 
+  font-weight: bold;
+  margin: 0 auto;
+  padding: 10px;
+  width: 75%;
+  height:70%;
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  mix-blend-mode: multiply;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container img {vertical-align: middle;}
+
+.container .content {
+  position: absolute;
+  bottom: 0;
+  background: rgb(0, 0, 0);
+  background: rgba(0, 0, 0, 0.5);
+  color: #f1f1f1;
+  width: 100%;
+  padding: 20px;
+}
+
+</style>
+</head>
+<body>
+<div class="header">
+<div class="navbar">
+<img src="logo.png" align="left">
+  <a class="effect" href="home.html">Acasa</a>
+  <a class="effect" href="servicii.html">Servicii</a>
+ <a class="effect" href="proiecte.html">Proiecte</a>
+  
+  <a  class="effect" href="echipa.html">Echipa</a>
+</div>
+
+<font face="Engravers MT"><b>“Simplicity is the ultimate sophistication.”<br> Leonardo da Vinci</b></font>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="bg-arh5.jpg" style="width:100%">
+ 
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="bg-arh6.jpg" style="width:100%">
+
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="bg-arh11.jpg" style="width:100%">
+
+</div><br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+</div>
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000);
+}
+</script>
+<div class="content">
+<br><br><br><br>
+  <div class="image-container" >
+  <div class="text1" >DESPRE NOI</div>
+</div></p>
+<br><br>
+<img src="bg-arh16.jpg" align="left" class="img">
+<br><br>
+  <p  class="font1">Crossroads Architecture este un birou de arhitectură fondat în 2001 cu sediul în Brașov care realizează proiecte pentru construcții rezidențiale, comerciale 
+  dar și de restaurare a clădirilor istorice. Echipa noastră tânără și dinamică de arhitecți are o vastă experiență și pregătire în țări precum Marea Britanie,  
+  Austria și Italia.</p>
+  <p class="font1">Firma noastră se cracterizează prin creativitate, entuziasm și responsabilitate. Întâmpinăm fiecare proiect 
+  cu studii aprofundate și implicare totală din partea membrilor echipei noastre. Credem că colaborarea strânsă dintre aceștia și clienții noștri este esențială
+  pentru a obține cele mai bune rezultate. Pentru noi, intrebarile potrivite adresate clienților în momentul consilierii, sunt primul pas 
+  către găsirea celor mai bune răspunsuri. Echipa noastra colaboreaza activ cu experti din toate domeniile conexe, pentru a identifica si 
+  dezvolta intregul potential al proiectului, de la primele studii si pana la executia proiectului.</p>
+  <br><br>
+ <div class="image-container" >
+
+  <div class="text1" >VIZIUNE</div>
+</div>
+<br><br><br>
+<img src="bg-arh17.jpg" align="right" class="img">
+<br><br>
+  <p class="font1">Scopul nostru este de a dezvolta o arhitectura care afecteaza in mod pozitiv societatea, din punct de vedere 
+  arhitectural, ecologic si social.Filosofia noastra in design este aceea de a evita procesele liniare de dezvoltare si de a creea 
+  ecosisteme arhitecturale, ce raspund nu numai nevoilor curente dar si celor viitoare.
+Astfel, garantam solutii practice, durabile si eficiente din punct de vedere al costurilor, conforme cerintelor pietei de arhitectura 
+nationala si internationala.</p> 
+
+<br><br><br><br><br><br><br><br><br>
+<div class="image-container" >
+
+  <div class="text1" >FORMARE CONTINUA</div>
+</div>
+<img src="arhi.jpg" align="left" class="img">
+<p class="font1">Suntem ferm convinși că singurul mod de a evolua este de a cotinua procesul de învățare și de aceea îi încurajăm pe 
+membrii echipei noastre să se implice în cât mai multe proiecte inter-disciplinare, să participe la conferințe unde pot învăța de la cei mai buni arhitecți
+ai lumii, și de a se inspira din modelele arhitecturale apreciate de-a lungul istoriei dar și din cele actuale.
+De-a lungul anilor am vizitat: </p>
+<ul class="font1">
+<li>Londra
+<li>Venetia
+<li>Amsterdam
+<li>Munchen
+<li>Valencia
+
+</ul>
+<p class="font1" >și am luat parte la cele mai importante conferințe și târguri de arhitectură din lume:</p>
+<ul class="font1">
+<li>Bienala de arhitectura din Venetia
+<li>ArchiBau Munchen
+<li>EcoBuild Londra
+<li>London Build Expo
+<li>London Design Festival
+<li>Open House London
+<li>Long Night of Architecture Munchen
+<li>Targul international de mobilier din Milano
+</ul>
+
+
+
+<p class="font1" >În concluzie, lăsăm numerele să vorbească pentru noi</p><br>
+<div class="container">
+  <img src="bg-arh132.jpg" style="width:100%;">
+  <div class="content">
+    <h1>Statistici</h1>
+<p>Proiecte în peste 20 de țări din toată lumea</p>
+<p>Peste 25 987 564 m<sup>2</sup> construiți</p>
+<p>65 de premii și nominalizări</p>
+<p>134 de clienți</p>
+<p>182 de proiecte</p>
+  </div>
+</div><br>
+</div>
+
+</body>
+</html>
